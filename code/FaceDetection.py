@@ -64,6 +64,21 @@ while True:
         break
 '''        
 # Release the VideoCapture object
+def rectangle_faces_selection(image_path, faces):
+      # display image
+    image = plt.imread(image_path)
+    plt.imshow(image)
+
+    ax = plt.gca()
+
+    # for each face, draw a rectangle based on coordinates
+    for face in faces:
+        x, y, width, height = face['box']
+        face_border = Rectangle((x, y), width, height,
+                          fill=False, color='red')
+        ax.add_patch(face_border)
+    plt.show()
+
 
 
 
