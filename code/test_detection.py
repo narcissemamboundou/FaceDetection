@@ -6,6 +6,7 @@ Created on Mon Aug  3 15:55:55 2020
 """
 
 import cv2
+import numpy 
 
 
 #video object 
